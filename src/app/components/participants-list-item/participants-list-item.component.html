@@ -1,0 +1,18 @@
+<li class="row mt-2 mb-2 participant-card" >
+    <div class=" " [ngClass]="{hostile: participant.hostile}" >
+        <div class="row"  >
+            <h3>{{participant.name}}</h3>
+        </div>
+        <form action=""  #form="ngForm" (change)="onChangeParticipant(participant, form)">
+            <div class="row" >
+                <div class="form-group col-md-2 ">
+                    <input class="form-control" type="number"  name="hitPoints" ngModel placeholder="{{participant.hitPoints}}">
+                </div>
+                <div class="form-group col">
+                    <h3 class="">/{{participant.hitPointMaximum}}</h3>
+                </div>
+            </div>
+        </form> 
+    </div>
+</li>
+

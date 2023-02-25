@@ -1,0 +1,7 @@
+<div class="participants">
+    <ul cdkDropList  (cdkDropListDropped)="drop($event)">
+        <app-participants-list-item class="list-group-item  list-group-item-action" 
+        *ngFor="let participant of participants;" [participant]="participant" cdkDrag
+        (onChange)="changeParticipant(participant)"></app-participants-list-item>
+    </ul>    
+</div>
